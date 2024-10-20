@@ -6,3 +6,4 @@ janome
 dotenv
 notion_client
 plotly.express
+wordcloud
