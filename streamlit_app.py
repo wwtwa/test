@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import japanize_matplotlib  # 日本語表示のため
 from janome.tokenizer import Tokenizer
