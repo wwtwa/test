@@ -3,7 +3,7 @@ pandas
 matplotlib
 japanize_matplotlib
 janome
-dotenv
+python-dotenv
 notion_client
 plotly.express
 wordcloud
