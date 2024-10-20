@@ -7,3 +7,4 @@ python-dotenv
 notion_client
 plotly.express
 wordcloud
+distutils
