@@ -1,6 +1,6 @@
 streamlit
 pandas
-WordCloud
+wordcloud
 matplotlib.pyplot
 japanize_matplotlib
 janome
