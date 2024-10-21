@@ -98,4 +98,4 @@ plt.show()
 st.pyplot(plt)
 
    
-st.write(numbers)
+st.table(pd.DataFrame(numbers))
