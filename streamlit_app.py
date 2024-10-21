@@ -68,19 +68,6 @@ grid[1][1] = fig
 x = list(range(50))
 y = np.random.randn(50)
 
-red_x, red_y = np.random.randn(10), np.random.randn(10)
-blue_x, blue_y = np.random.randn(10), np.random.randn(10)
-green_x, green_y = np.random.randn(10), np.random.randn(10)
-
-plt.scatter(red_x, red_y, c="r", alpha=0.5, label="red")
-plt.scatter(blue_x, blue_y, c="b", alpha=0.5, label="blue")
-plt.scatter(green_x, green_y, c="g", alpha=0.5, label="green")
-
-plt.legend()
-plt.show()
-
-# Streamlitで表示
-st.pyplot(plt)
 
    
 st.write(df)
@@ -89,6 +76,26 @@ def extract_number(row):
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
-groups = numbers.groupby("2")
+
+data_dict = {}
+for x, y, kind in numbers:
+    if kind not in data_dict:
+        data_dict[kind] = []
+    data_dict[kind].append([x, y])
+
+# プロット
+plt.figure(figsize=(8, 6))
+for kind, points in data_dict.items():
+    x, y = zip(*points)
+    plt.scatter(x, y, label=kind)
+
+plt.legend()
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('種類ごとの散布図')
+plt.grid(True)
+plt.show()
+
+st.pyplot(plt)
 
 st.write(groups)
