@@ -97,6 +97,5 @@ plt.show()
 
 st.pyplot(plt)
 
-   
-st.table(pd.DataFrame([rr[3] for rr in number], columns=('論文名')))
+
 st.write(df)
