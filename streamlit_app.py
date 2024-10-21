@@ -79,7 +79,6 @@ plt.scatter(green_x, green_y, c="g", alpha=0.5, label="green")
 plt.legend()
 plt.show()
 
-plt.rcParams[‘image.cmap’] = ‘set1’
 # Streamlitで表示
 st.pyplot(plt)
 
