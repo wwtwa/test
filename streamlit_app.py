@@ -77,4 +77,5 @@ plt.ylabel('Y-axis')
 # Streamlitで表示
 st.pyplot(plt)
 
-st.write(df)
+   
+st.write((lambda row: ', '.join([x["name"] for x in row["properties"].get("大分類", {}).get("multi_select", []) if x]))
