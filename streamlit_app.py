@@ -68,19 +68,25 @@ grid[1][1] = fig
 x = list(range(50))
 y = np.random.randn(50)
 
-plt.show()
-plt.plot(x, y)
-plt.title('Matplotlib and Streamlit')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
+red_x, red_y = np.random.randn(10), np.random.randn(10)
+blue_x, blue_y = np.random.randn(10), np.random.randn(10)
+green_x, green_y = np.random.randn(10), np.random.randn(10)
 
+plt.scatter(red_x, red_y, c="r", alpha=0.5, label="red")
+plt.scatter(blue_x, blue_y, c="b", alpha=0.5, label="blue")
+plt.scatter(green_x, green_y, c="g", alpha=0.5, label="green")
+
+plt.legend()
+plt.show()
+
+plt.rcParams[‘image.cmap’] = ‘set1’
 # Streamlitで表示
 st.pyplot(plt)
 
    
 st.write(df)
 def extract_number(row):
-    return row['大分類']['number'],row['小分類']['number']
+    return row['大分類']['number'],row['小分類']['number'],row['種類']['name'],
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
