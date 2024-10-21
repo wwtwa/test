@@ -68,6 +68,6 @@ grid[1][1] = fig
 x = list(range(50))
 y = np.random.randn(50)
 
-df.plot(x='x', y='y', kind='line')  # 線グラフ
+df.plot(x='大分類', y='小分類', kind='line')  # 線グラフ
 
 st.pyplot(df)
