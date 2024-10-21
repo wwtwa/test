@@ -66,7 +66,7 @@ grid[1][1] = fig
 
 
 def extract_number(row):
-    return row['繰り返し周波数[GHz]']['number'],row['P_th [mW]']['number'],row['種類']['select']['name'],row['PaperName']['title']['plain_text'],
+    return row['繰り返し周波数[GHz]']['number'],row['P_th [mW]']['number'],row['種類']['select']['name'],row['PaperName']['title'][0]['plain_text'],
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
