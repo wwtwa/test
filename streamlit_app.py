@@ -70,7 +70,7 @@ y = np.random.randn(50)
 
 
 def extract_number(row):
-    return row['大分類']['number'],row['小分類']['number'],row['種類']['select']['name'],
+    return row['繰り返し周波数[GHz]']['number'],row['P_th [mW]']['number'],row['種類']['select']['name'],
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
@@ -88,8 +88,8 @@ for kind, points in data_dict.items():
     plt.scatter(x, y, label=kind)
 
 plt.legend()
-plt.xlabel('X')
-plt.ylabel('Y')
+plt.xlabel('繰り返し周波数 [GHz]')
+plt.ylabel('P_th [mW]')
 plt.title('種類ごとの散布図')
 plt.grid(True)
 plt.show()
