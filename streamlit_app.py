@@ -66,22 +66,22 @@ grid[1][1] = fig
 
 
 def extract_number(row):
-    return row['繰り返し周波数[GHz]']['number'],row['P_th [mW]']['number'],row['種類']['select']['name'],
+    return row['繰り返し周波数[GHz]']['number'],row['P_th [mW]']['number'],row['種類']['select']['name'],row["PaperName"]["title"]["plain_text"],
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
 
 data_dict = {}
-for x, y, kind in numbers:
+for x, y, kind, title in numbers:
     if kind not in data_dict:
         data_dict[kind] = []
-    data_dict[kind].append([x, y])
+    data_dict[kind].append([x, y,title])
 
 # プロット
 
 plt.figure(figsize=(8, 6))
 for kind, points in data_dict.items():
-    x, y = zip(*points)
+    x, y = zip(*points[0:1])
     plt.scatter(x, y, label=kind)
 
 plt.legend()
