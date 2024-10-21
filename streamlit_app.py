@@ -68,6 +68,11 @@ grid[1][1] = fig
 x = list(range(50))
 y = np.random.randn(50)
 
-df.plot(x='大分類', y='小分類', kind='line')  # 線グラフ
+plt.show()
+plt.plot(x, y)
+plt.title('Matplotlib and Streamlit')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
 
-st.pyplot(df)
+# Streamlitで表示
+st.pyplot(plt)
