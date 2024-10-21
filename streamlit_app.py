@@ -98,5 +98,5 @@ plt.show()
 st.pyplot(plt)
 
    
-st.table(pd.DataFrame([number[3] for number in b], columns=('論文名')))
+st.table(pd.DataFrame([r[3] for r in number], columns=('論文名')))
 st.write(df)
