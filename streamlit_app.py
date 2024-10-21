@@ -81,7 +81,7 @@ for x, y, kind, title in numbers:
 
 plt.figure(figsize=(8, 6))
 for kind, points in data_dict.items():
-    x, y = zip(*points[0:1])
+    x, y,z = zip(*points)
     plt.scatter(x, y, label=kind)
 
 plt.legend()
