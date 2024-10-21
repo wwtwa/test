@@ -78,4 +78,4 @@ plt.ylabel('Y-axis')
 st.pyplot(plt)
 
    
-st.write((lambda row: ', '.join([x["name"] for x in row["properties"].get("大分類", {}).get("multi_select", []) if x]))
+st.write(lambda row: ', '.join([x["name"] for x in row["properties"].get("大分類", {}).get("multi_select", []) if x]))
