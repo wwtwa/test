@@ -98,5 +98,5 @@ plt.show()
 st.pyplot(plt)
 
    
-st.table(pd.DataFrame([numbers[0],numbers[1]], columns=('繰り返し周波数[GHz]','P_th [mW]','種類')))
+st.table(pd.DataFrame([number[3] for number in b], columns=('論文名')))
 st.write(df)
