@@ -33,7 +33,6 @@ def extract_property_value(row, property_name, sub_property=None):
 px.defaults.template = "plotly_dark"
 
 # アプリケーションのタイトル設定とスタイル調整
-st.title("Notion Reading List Visualization")
 st.markdown(
    """
    <style>
