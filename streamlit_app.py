@@ -64,15 +64,14 @@ subcategory_counts = df.apply(lambda row: ', '.join([x["name"] for x in row["pro
 fig = px.bar(x=subcategory_counts.index, y=subcategory_counts.values, labels={'x': "<b>小分類</b>", 'y': "<b>件数</b>"}, title="<b>小分類別の件数</b>")
 grid[1][1] = fig
 
-# グラフを表示
-for row in grid:
-   cols = st.columns(2)
-   with cols[0]:
-       if row[0] is not None:
-           if isinstance(row[0], plt.Figure):
-               st.pyplot(row[0])
-           else:
-               st.plotly_chart(row[0], use_container_width=True)
-   with cols[1]:
-       if row[1] is not None:
-           st.plotly_chart(row[1], use_container_width=True)
+x = list(range(50))
+y = np.random.randn(50)
+
+
+plt.plot(x, y)
+plt.title('Matplotlib and Streamlit')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+# Streamlitで表示
+st.pyplot(plt)
