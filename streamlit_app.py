@@ -76,3 +76,5 @@ plt.ylabel('Y-axis')
 
 # Streamlitで表示
 st.pyplot(plt)
+
+st.write(df)
