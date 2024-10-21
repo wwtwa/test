@@ -69,8 +69,7 @@ x = list(range(50))
 y = np.random.randn(50)
 
 
-   
-st.write(df)
+
 def extract_number(row):
     return row['大分類']['number'],row['小分類']['number'],row['種類']['select']['name'],
 
@@ -98,4 +97,5 @@ plt.show()
 
 st.pyplot(plt)
 
-st.write(groups)
+   
+st.write(df)
