@@ -48,13 +48,6 @@ st.markdown(
 grid = [[None, None], [None, None]]
 font_path = 'fonts/ヒラギノ明朝 ProN.ttc'  # フォントパスを指定
 
-# 単語クラウドの表示
-titles = " ".join([row["properties"]["タイトル"]["title"][0]["plain_text"] for _, row in df.iterrows()])
-wordcloud = WordCloud(width=400, height=200, background_color='black', font_path=font_path).generate(titles)
-fig, ax = plt.subplots(figsize=(5, 3))
-ax.imshow(wordcloud, interpolation="bilinear")
-ax.axis("off")
-grid[0][0] = fig
 
 # ステータス別の円グラフ
 status_counts = df.apply(lambda row: extract_property_value(row, "ステータス", "status"), axis=1).value_counts()
