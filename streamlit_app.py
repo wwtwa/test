@@ -99,3 +99,4 @@ st.pyplot(plt)
 
    
 st.table(pd.DataFrame(numbers, columns=('繰り返し周波数[GHz]','P_th [mW]','種類')))
+st.write(pd)
