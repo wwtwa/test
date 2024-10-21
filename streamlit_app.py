@@ -82,6 +82,9 @@ for x, y, kind in numbers:
     data_dict[kind].append([x, y])
 
 # プロット
+ax = plt.gca()
+ax.set_yscale('log')
+ax.set_xscale('log')
 plt.figure(figsize=(8, 6))
 for kind, points in data_dict.items():
     x, y = zip(*points)
