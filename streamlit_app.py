@@ -8,6 +8,7 @@ import os
 from dotenv import load_dotenv
 from notion_client import Client
 import plotly.express as px
+import numpy as np
 
 # 環境変数のロード
 load_dotenv()
