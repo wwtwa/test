@@ -89,6 +89,6 @@ def extract_number(row):
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
-groups = df.groupby(numbers[0][2])
+groups = numbers.groupby("2")
 
 st.write(groups)
