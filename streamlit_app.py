@@ -64,10 +64,6 @@ subcategory_counts = df.apply(lambda row: ', '.join([x["name"] for x in row["pro
 fig = px.bar(x=subcategory_counts.index, y=subcategory_counts.values, labels={'x': "<b>小分類</b>", 'y': "<b>件数</b>"}, title="<b>小分類別の件数</b>")
 grid[1][1] = fig
 
-x = list(range(50))
-y = np.random.randn(50)
-
-
 
 def extract_number(row):
     return row['繰り返し周波数[GHz]']['number'],row['P_th [mW]']['number'],row['種類']['select']['name'],
@@ -102,4 +98,4 @@ plt.show()
 st.pyplot(plt)
 
    
-st.write(df)
+st.write(numbers)
