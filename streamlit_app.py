@@ -85,7 +85,7 @@ st.pyplot(plt)
    
 st.write(df)
 def extract_number(row):
-    return row['大分類']['number'],row['小分類']['number'],row['種類']['name'],
+    return row['大分類']['number'],row['小分類']['number'],row['種類'][select]['name'],
 
 # 全ての行の"大分類"の"number"を抽出してリストを作成
 numbers = df['properties'].apply(extract_number).tolist()
